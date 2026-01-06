@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Larsen Woodworking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Handcrafted furniture, cabinetry, and custom builds made to last." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">Larsen Woodworking</div>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Larsens are cool</h1>
+        <p>things • stuff</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        We specialize in handcrafted furniture, cabinetry, and custom woodworking built to last.
+        Thoughtful design, clean joinery, and a finish you’ll be proud to show off.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Custom builds</h3>
+          <p>Furniture, built-ins, and one-off pieces designed to fit your space.</p>
+        </div>
+        <div class="feature">
+          <h3>Quality materials</h3>
+          <p>Solid hardwoods and durable finishes—no shortcuts.</p>
+        </div>
+        <div class="feature">
+          <h3>Clear process</h3>
+          <p>Simple quotes, clear timelines, and great communication.</p>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="contact" class="card">
+      <div class="section-head">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">Tell us what you’re looking to build. We’ll get back to you soon.</p>
+        </div>
+        <div class="contact-meta">
+          <!-- Optional: add phone/email if you want -->
+          <!-- <div><span class="meta-label">Phone</span><br>(555) 555-5555</div> -->
+          <!-- <div><span class="meta-label">Email</span><br>hello@smithwoodwork.com</div> -->
+        </div>
+      </div>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Honeypot anti-spam -->
+        <p class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="grid">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="6" required placeholder="Tell us about your project (size, wood type, timeline, budget range if you have one)…"></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Larsen Custom Woodworking</p>
+      <p class="muted">Made in Utah</p>
+    </div>
+  </footer>
+
+</body>
+</html>
