@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Larsen Woodworking</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Handcrafted furniture, cabinetry, and custom builds made to last." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Larsen Woodworking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Handcrafted furniture, cabinetry, and custom builds made to last."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<script>
-  const form = document.querySelector('form[name="contact"]');
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <img src="images/logo.png" alt="Larsen Woodworking" class="logo" />
+      </nav>
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+      <div class="hero"></div>
+    </header>
 
-    const formData = new FormData(form);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: formData
-    })
-    .then(() => {
-      form.reset();
-      form.innerHTML = `
-        <h3>Thanks — message sent.</h3>
-        <p>We’ll get back to you soon.</p>
-      `;
-    })
-    .catch(() => {
-      alert('Something went wrong. Please try again.');
-    });
-  });
-</script>
-
-<body>
-
-  <header class="site-header">
-    <nav class="nav">
-      <img src="images/logo.png" alt="Larsen Woodworking" class="logo">
-    </nav>
-
-    <div class="hero">
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section id="contact" class="card">
-      <div class="section-head">
-        <div>
-          <h2>Contact</h2>
-          <p class="muted">Let me know what you’re looking to build. I’ll get back to you soon.</p>
+    <main class="container">
+      <section id="contact" class="card">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">
+              Let me know what you’re looking to build. I’ll get back to you
+              soon.
+            </p>
+          </div>
+          <div class="contact-meta">
+            <!-- Optional: add phone/email if you want -->
+            <!-- <div><span class="meta-label">Phone</span><br>(555) 555-5555</div> -->
+            <!-- <div><span class="meta-label">Email</span><br>hello@smithwoodwork.com</div> -->
+          </div>
         </div>
-        <div class="contact-meta">
-          <!-- Optional: add phone/email if you want -->
-          <!-- <div><span class="meta-label">Phone</span><br>(555) 555-5555</div> -->
-          <!-- <div><span class="meta-label">Email</span><br>hello@smithwoodwork.com</div> -->
-        </div>
+
+        <form name="contact" class="form" netlify>
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="grid">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 Wood Classics</p>
+        <p class="muted">Made in Utah</p>
       </div>
+    </footer>
 
-      <form name="contact" class="form" netlify>
-        <input type="hidden" name="form-name" value="contact" />
+    <script>
+      const form = document.querySelector('form[name="contact"]');
 
-        <!-- Honeypot anti-spam -->
-        <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
+      function encode(data) {
+        return new URLSearchParams(data).toString();
+      }
 
-        <div class="grid">
-          <label class="field">
-            <span>Name</span>
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-        </div>
+        const data = Object.fromEntries(new FormData(form).entries());
 
-        <label class="field">
-          <span>Message</span>
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-
-        <button class="btn btn-primary" type="submit">Send message</button>
-      </form>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© 2026 Wood Classics</p>
-      <p class="muted">Made in Utah</p>
-    </div>
-  </footer>
-
-</body>
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode(data),
+        })
+          .then(() => {
+            form.reset();
+            form.innerHTML = `
+        <h3>Thanks — message sent.</h3>
+        <p class="muted">We’ll get back to you soon.</p>
+      `;
+          })
+          .catch(() => {
+            alert("Something went wrong. Please try again.");
+          });
+      });
+    </script>
+  </body>
 </html>
