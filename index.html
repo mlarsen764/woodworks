@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Larsen Woodworking</title>
+    <title>Wood Classics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -14,7 +14,7 @@
   <body>
     <header class="site-header">
       <nav class="nav">
-        <img src="images/logo.png" alt="Larsen Woodworking" class="logo" />
+        <img src="images/logo.png" alt="Wood Classics" class="logo" />
       </nav>
 
       <div class="hero"></div>
@@ -69,34 +69,6 @@
       </div>
     </footer>
 
-    <script>
-      const form = document.querySelector('form[name="contact"]');
-
-      function encode(data) {
-        return new URLSearchParams(data).toString();
-      }
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const data = Object.fromEntries(new FormData(form).entries());
-
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode(data),
-        })
-          .then(() => {
-            form.reset();
-            form.innerHTML = `
-        <h3>Thanks — message sent.</h3>
-        <p class="muted">We’ll get back to you soon.</p>
-      `;
-          })
-          .catch(() => {
-            alert("Something went wrong. Please try again.");
-          });
-      });
-    </script>
   </body>
+
 </html>
