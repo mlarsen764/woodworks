@@ -94,9 +94,9 @@ body{
   display: grid;
   align-items: end;
   padding: 4.5rem 0 3.5rem;
-  background-image: url("images/kitchen.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url("images/kitchen-horizontal.jpg");
+  background-size: 120%;
+  background-position: 30% 70%;
 }
 
 .hero-overlay{
@@ -318,6 +318,7 @@ input:focus, textarea:focus{
   .hero{ 
     min-height: 62vh; 
     padding: 3.5rem 0 3rem;
+    background-image: url("images/kitchen.jpg");
     background-size: cover;
     background-position: center;
   }
