@@ -323,13 +323,13 @@ input:focus, textarea:focus{
     background-position: center;
   }
   .logo{
-    height: 80px;
-    margin-left: -2rem;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    height: 115px;
+    margin-left: -3rem;
+    margin-top: -15px;
+    margin-bottom: -15px;
   }
   .nav{
-    padding: 0.3rem 0;
+    padding: 0.45rem 0;
   }
   .card{
     margin: 1rem 0;
