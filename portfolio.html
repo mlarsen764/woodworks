@@ -12,10 +12,13 @@
     <nav class="site-nav">
       <div class="nav">
         <img src="images/logo.png" alt="Wood Classics" class="logo" />
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
       </div>
     </nav>
 
@@ -61,5 +64,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>GLightbox();</script>
+    <script>document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('open');});</script>
   </body>
 </html>

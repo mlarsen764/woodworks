@@ -56,6 +56,25 @@ body{
   padding: 0.5rem 0;
   width: min(1000px, calc(100% - 2rem));
   margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-links{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-toggle{
+  display: none;
+  background: rgba(74,55,40,0.35);
+  border: 1px solid rgba(74,55,40,0.3);
+  border-radius: 999px;
+  color: #4A3728;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
 }
 
 .logo{
@@ -337,6 +356,21 @@ input:focus, textarea:focus{
   .card{
     margin: 1rem 0;
     padding: 1.2rem;
+  }
+  .nav-toggle{ display: block; }
+  .nav-links{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding-bottom: 0.5rem;
+  }
+  .nav-links.open{ display: flex; }
+  .nav-links .nav-link{
+    padding: 0.6rem 0;
+    width: 100%;
+    border-top: 1px solid rgba(74,55,40,0.15);
   }
 }
 
