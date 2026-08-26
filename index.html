@@ -39,11 +39,6 @@
               soon.
             </p>
           </div>
-          <div class="contact-meta">
-            <!-- Optional: add phone/email if you want -->
-            <!-- <div><span class="meta-label">Phone</span><br>(555) 555-5555</div> -->
-            <!-- <div><span class="meta-label">Email</span><br>hello@smithwoodwork.com</div> -->
-          </div>
         </div>
 
         <form name="contact" class="form" netlify>
@@ -51,24 +46,49 @@
 
           <div class="grid">
             <label class="field">
-              <span>Name</span>
+              <span>Name <span style="color:var(--accent)">*</span></span>
               <input type="text" name="name" autocomplete="name" required />
             </label>
-
             <label class="field">
-              <span>Email</span>
+              <span>Email <span style="color:var(--accent)">*</span></span>
               <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label class="field">
+              <span>Location</span>
+              <input type="text" name="location" autocomplete="address-level2" />
+            </label>
+            <label class="field">
+              <span>Budget</span>
+              <input type="text" name="budget" />
             </label>
           </div>
 
           <label class="field">
-            <span>Message</span>
-            <textarea name="message" rows="6" required></textarea>
+            <span>Project Description</span>
+            <textarea name="description" rows="5" required></textarea>
+          </label>
+
+          <label class="field">
+            <span>Projected Due Date</span>
+            <input type="date" name="due-date" id="due-date" />
+          </label>
+
+          <label class="field">
+            <span>Image / Drawing / Sketch</span>
+            <input type="file" name="attachment" accept="image/*,.pdf" />
           </label>
 
           <button class="btn btn-primary" type="submit">Send message</button>
         </form>
       </section>
+
+      <div style="display:flex;justify-content:center">
+      <section class="card" style="display:inline-flex;flex-direction:column;align-items:center;text-align:center;font-size:1.15rem">
+        <p style="margin:0;font-weight:700">Andy Larsen, Owner</p>
+        <p style="margin:0"><a href="tel:3852361283" style="color:inherit">(385) 236-1283</a></p>
+        <p style="margin:0"><a href="mailto:andy.woodclassics@gmail.com" style="color:inherit">andy.woodclassics@gmail.com</a></p>
+      </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -78,5 +98,6 @@
       </div>
     </footer>
 
-    <script>document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('open');});</script>
+    <script>document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('open');});
+document.getElementById('due-date').min=new Date().toISOString().split('T')[0];document.querySelector('input[type="date"]').addEventListener('click',function(){this.showPicker();});</script>
   </body>
