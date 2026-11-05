@@ -1,0 +1,7 @@
+woodworks/
+├── about/
+├── images/
+├── portfolio/
+├── index.html
+├── sitemap.xml
+└── robots.txt   ← new file
