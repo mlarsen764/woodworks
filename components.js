@@ -12,6 +12,7 @@ const navHTML = `
       <a href="index.html" class="nav-link">Home</a>
       <a href="portfolio.html" class="nav-link">Portfolio</a>
       <a href="about.html" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </div>
   </div>
@@ -37,6 +38,7 @@ const footerHTML = `
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
         <a href="https://www.facebook.com/profile.php?id=61595021345894" target="_blank" rel="noopener">${iconFacebook} Facebook</a>
         <a href="https://www.instagram.com/woodclassics.utah/" target="_blank" rel="noopener">${iconInstagram} Instagram</a>
