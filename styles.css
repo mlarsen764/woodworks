@@ -43,7 +43,7 @@ body{
 }
 
 .site-nav{
-  background: url("images/header-background.png") top/cover;
+  background: url("images/header-background.webp") top/cover;
   border-bottom: 1px solid var(--border);
 }
 
