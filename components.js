@@ -10,9 +10,9 @@ const navHTML = `
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Home</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="projects.html" class="nav-link">Projects</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="articles.html" class="nav-link">Articles</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </div>
   </div>
@@ -31,14 +31,14 @@ const footerHTML = `
         <a href="contact.html">Request a Quote</a>
         <br>
         <p class="muted">&copy; 2026 Wood Classics LLC</p>
-        <p class="muted">Made in Utah</p>
+        <p class="muted">Made in Springville, Utah</p>
       </div>
       <div class="footer-col">
         <p class="footer-heading">Quick Links</p>
         <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
+        <a href="articles.html">Articles</a>
         <a href="contact.html">Contact</a>
         <a href="https://www.facebook.com/profile.php?id=61595021345894" target="_blank" rel="noopener">${iconFacebook} Facebook</a>
         <a href="https://www.instagram.com/woodclassics.utah/" target="_blank" rel="noopener">${iconInstagram} Instagram</a>
@@ -48,7 +48,7 @@ const footerHTML = `
         <p>1086 N 450 W, Suite 112<br>Springville, UT 84663</p>
         <div class="footer-map">
           <iframe
-            src="https://maps.google.com/maps?q=1086+N+450+W+Suite+112,+Springville,+UT+84663&output=embed&z=15"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.5!2d-111.6193421!3d40.1817867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d97a090716e65%3A0xed21ca1a7f4067c!2sWood%20Classics%20LLC!5e0!3m2!1sen!2sus!4v1700000000000"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="Wood Classics location map"></iframe>
         </div>
