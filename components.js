@@ -6,14 +6,14 @@ const iconInstagram = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height
 const navHTML = `
 <nav class="site-nav">
   <div class="nav">
-    <a href="index.html"><img src="images/logo.png" alt="Wood Classics" class="logo" width="368" height="210" /></a>
+    <a href="/"><img src="images/logo.png" alt="Wood Classics" class="logo" width="368" height="210" /></a>
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/projects" class="nav-link">Projects</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/blog" class="nav-link">Blog</a>
+      <a href="/contact" class="nav-link">Contact</a>
     </div>
   </div>
 </nav>`;
@@ -28,18 +28,18 @@ const footerHTML = `
         <p>Andy Larsen, Owner</p>
         <a href="tel:3852361283">(385) 236-1283</a>
         <a href="mailto:andy.woodclassics@gmail.com">andy.woodclassics@gmail.com</a>
-        <a href="contact.html">Request a Quote</a>
+        <a href="/contact">Request a Quote</a>
         <br>
         <p class="muted">&copy; 2026 Wood Classics LLC</p>
         <p class="muted">Made in Springville, Utah</p>
       </div>
       <div class="footer-col">
         <p class="footer-heading">Quick Links</p>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.facebook.com/profile.php?id=61595021345894" target="_blank" rel="noopener">${iconFacebook} Facebook</a>
         <a href="https://www.instagram.com/woodclassics.utah/" target="_blank" rel="noopener">${iconInstagram} Instagram</a>
       </div>
